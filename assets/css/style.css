@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box; 
+    margin: 0; 
+}
+
+h1 {
+    text-align: center; 
+}
+.fitbit-container {
+    margin: 1em; 
+    display: flex; 
+    justify-content: center; 
+    height: 100px; 
+}
+
+card {
+    border-style: solid;
+    border-width: 1px; 
+    padding: 1em;  
+    margin: 0.5em;
+}
+
+.calorie-calendar {
+    border-style: solid; 
+    padding: 10%; 
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.calendar-graph {
+    border-style: solid; 
+    padding: 10%; 
+    margin-top: 5%; 
+    margin-left: 20%;
+    margin-right: 20%;
+}
