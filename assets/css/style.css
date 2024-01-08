@@ -1,11 +1,23 @@
 * {
     box-sizing: border-box; 
     margin: 0; 
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
     text-align: center; 
 }
+
+nav {
+    text-align: center;
+    padding: 1em;
+}
+
+nav li {
+    display: inline;
+    padding: 1em;
+}
+
 .fitbit-container {
     margin: 1em; 
     display: flex; 
