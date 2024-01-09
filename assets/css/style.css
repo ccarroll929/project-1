@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box; 
+    margin: 0; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center; 
+}
+
+nav {
+    text-align: center;
+    padding: 1em;
+}
+
+nav li {
+    display: inline;
+    padding: 1em;
+}
+
+.fitbit-container {
+    margin: 1em; 
+    display: flex; 
+    justify-content: center; 
+    height: 100px; 
+}
+
+card {
+    border-style: solid;
+    border-width: 1px; 
+    padding: 1em;  
+    margin: 0.5em;
+}
+
+.calorie-calendar {
+    border-style: solid; 
+    padding: 10%; 
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.calendar-graph {
+    border-style: solid; 
+    padding: 10%; 
+    margin-top: 5%; 
+    margin-left: 20%;
+    margin-right: 20%;
+}
