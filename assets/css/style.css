@@ -1,6 +1,7 @@
 /* Update the existing styles */
 body {
     background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -52,14 +53,11 @@ card {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.calorie-calendar,
-.calendar-graph {
+.calorie-calendar {
     border-style: solid;
     padding: 10%; 
     margin-left: 5%;
     margin-right: 20%;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Add some hover effect on cards */
@@ -70,7 +68,6 @@ card:hover {
 
 /* Add some styles to make it more visually appealing */
 
-.calorie-calendar,
 .calendar-graph {
     border-style: solid; 
     padding: 10%; 
@@ -106,6 +103,11 @@ card:hover {
     text-align: center;
     font-size: 1.2em;
     color: #333;
+}
+
+.box-shadow {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Optional: Add styles for responsive design */
