@@ -5,9 +5,10 @@
 }
 
 h1 {
+    padding-top: 1em;
     text-align: center; 
 }
-
+/* Added selectors for navbar to center the elements with the document */
 nav {
     text-align: center;
     padding: 1em;
@@ -35,7 +36,7 @@ card {
 .calorie-calendar {
     border-style: solid; 
     padding: 10%; 
-    margin-left: 20%;
+    margin-left: 5%;
     margin-right: 20%;
 }
 
@@ -43,6 +44,32 @@ card {
     border-style: solid; 
     padding: 10%; 
     margin-top: 5%; 
-    margin-left: 20%;
+    margin-left: 5%;
     margin-right: 20%;
+}
+
+/* Added classes and selectors for the data display sections*/
+
+.main-data {
+    display: flex;
+    justify-content: center;
+}
+
+.info-display {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/* Added classes for proper sidebar functionality */
+
+.sidebar {
+    display: inline;
+    border-style: solid;
+    padding: 5%;
+    margin-left: 5%;
+}
+
+.sidebar h2 {
+    display: inline;
+    padding-bottom: 1em;
 }
