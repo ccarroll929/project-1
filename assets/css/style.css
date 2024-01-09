@@ -1,7 +1,6 @@
-* {
-    box-sizing: border-box; 
-    margin: 0; 
-    font-family: Arial, Helvetica, sans-serif;
+/* Update the existing styles */
+body {
+    background-color: #f4f4f4;
 }
 
 h1 {
@@ -14,16 +13,34 @@ nav {
     padding: 1em;
 }
 
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+}
+
+nav ul {
+    list-style: none;
+}
+
 nav li {
     display: inline;
     padding: 1em;
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
 }
 
 .fitbit-container {
     margin: 1em; 
     display: flex; 
     justify-content: center; 
-    height: 100px; 
+    align-items: center; /* Align items vertically in the center */
 }
 
 card {
@@ -31,15 +48,29 @@ card {
     border-width: 1px; 
     padding: 1em;  
     margin: 0.5em;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.calorie-calendar {
-    border-style: solid; 
+.calorie-calendar,
+.calendar-graph {
+    border-style: solid;
     padding: 10%; 
     margin-left: 5%;
     margin-right: 20%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Add some hover effect on cards */
+card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+/* Add some styles to make it more visually appealing */
+
+.calorie-calendar,
 .calendar-graph {
     border-style: solid; 
     padding: 10%; 
@@ -72,4 +103,15 @@ card {
 .sidebar h2 {
     display: inline;
     padding-bottom: 1em;
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Optional: Add styles for responsive design */
+@media screen and (max-width: 768px) {
+    .calorie-calendar,
+    .calendar-graph {
+        margin: 5% 10%;
+    }
 }
