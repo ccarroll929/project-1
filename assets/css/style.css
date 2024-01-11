@@ -117,3 +117,7 @@ card:hover {
         margin: 5% 10%;
     }
 }
+/* Add some styles for the calendar cells with intake data */
+.calorie-calendar td.has-intake {
+    background-color: #b3e0ff; /* Light blue for cells with intake data */
+}
