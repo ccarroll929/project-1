@@ -11,7 +11,6 @@ h1 {
 /* Added selectors for navbar to center the elements with the document */
 nav {
     text-align: center;
-    padding: 1em;
 }
 
 header {
@@ -21,7 +20,10 @@ header {
 }
 
 nav ul {
-    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 1%;
 }
 
 nav li {
@@ -37,11 +39,12 @@ nav a {
     text-decoration: none;
 }
 
-.fitbit-container {
-    margin: 1em; 
-    display: flex; 
+#fitbit-container {
+    display: flex;
+    flex-flow: row wrap;
     justify-content: center; 
     align-items: center; /* Align items vertically in the center */
+    margin: 1em;
 }
 
 card {
@@ -55,9 +58,9 @@ card {
 
 .calorie-calendar {
     border-style: solid;
-    padding: 10%; 
-    margin-left: 5%;
-    margin-right: 20%;
+    padding: 5%; 
+    margin-left: 1%;
+    width: fit-content;
 }
 
 /* Add some hover effect on cards */
@@ -70,16 +73,17 @@ card:hover {
 
 .calendar-graph {
     border-style: solid; 
-    padding: 10%; 
-    margin-top: 5%; 
-    margin-left: 5%;
-    margin-right: 20%;
+    padding: 5%; 
+    margin-top: 1%; 
+    margin-left: 1%;
+    width: fit-content;
 }
 
 /* Added classes and selectors for the data display sections*/
 
 .main-data {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -93,8 +97,7 @@ card:hover {
 .sidebar {
     display: inline;
     border-style: solid;
-    padding: 5%;
-    margin-left: 5%;
+    padding: 1%;
 }
 
 .sidebar h2 {
@@ -114,10 +117,16 @@ card:hover {
 @media screen and (max-width: 768px) {
     .calorie-calendar,
     .calendar-graph {
-        margin: 5% 10%;
+        margin: 1%;
     }
 }
 /* Add some styles for the calendar cells with intake data */
 .calorie-calendar td.has-intake {
     background-color: #b3e0ff; /* Light blue for cells with intake data */
+}
+
+#calorieBody {
+    width: 50%;
+    overflow: hidden;
+    overflow-x: scroll;
 }
