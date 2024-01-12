@@ -23,13 +23,19 @@ document.addEventListener('DOMContentLoaded', function () {
         return inputField;
     }
 
-    function calculateTotal() {
+    function calculateAverage() {
         // Calculate the total calories for the month
         const totalCalories = calorieData.reduce((total, entry) => total + entry.intake, 0);
 
-        // Display the total on the monthly graph
+        // Calculate the number of days with entries
+        const numberOfDays = calorieData.length;
+
+        // Calculate the daily average
+        const dailyAverage = numberOfDays > 0 ? totalCalories / numberOfDays : 0;
+
+        // Display the daily average on the monthly graph
         const monthlyGraphPlaceholder = document.getElementById('monthlyGraphPlaceholder');
-        monthlyGraphPlaceholder.innerHTML = `<p>Total Calories for the Month: ${totalCalories}</p>`;
+        monthlyGraphPlaceholder.innerHTML = `<p>Daily Average Calories for the Month: ${dailyAverage.toFixed(2)}</p>`;
 
         // You can further update this part based on your graph implementation
     }
@@ -86,9 +92,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // Call the function to initialize the calendar with input fields
     initializeCalendar();
 
-    // Expose calculateTotal function to the global scope
-    window.calculateTotal = calculateTotal;
+    // Expose calculateAverage function to the global scope
+    window.calculateAverage = calculateAverage;
+    const calculateTotalButton = document.querySelector('button');
+calculateTotalButton.addEventListener('click', calculateAverage);
+
+
 });
+
 
 const access_token = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyM1JMTUQiLCJzdWIiOiJCV0o5N1kiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJ3aHIgd3BybyB3bnV0IHdzbGUgd2VjZyB3c29jIHdhY3Qgd294eSB3dGVtIHd3ZWkgd2NmIHdzZXQgd2xvYyB3cmVzIiwiZXhwIjoxNzA1MDI4MzU0LCJpYXQiOjE3MDQ5OTk1NTR9.PdQxtrTbqu6PtIeGk3eBfZ6I8yTrkShHEJspC0gF14Q"
 
@@ -102,4 +113,3 @@ const access_token = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyM1JMTUQiLCJzdWIiOiJCV0o5N
 
 //  let heartrateEl = document.getElementById('fitbit-data-0')
 //  heartrateEl.innerHTML = ' Heart rate: ' + heart_rate;
-
