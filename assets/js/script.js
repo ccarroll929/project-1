@@ -95,5 +95,19 @@ document.addEventListener('DOMContentLoaded', function () {
     // Expose calculateAverage function to the global scope
     window.calculateAverage = calculateAverage;
     const calculateTotalButton = document.querySelector('button');
-calculateTotalButton.addEventListener('click', calculateAverage);
+    calculateTotalButton.addEventListener('click', calculateAverage);
+
+});
+
+$.ajax({
+    method: 'GET',
+    url: 'https://api.calorieninjas.com/v1/nutrition?query=' + query,
+    headers: { 'X-Api-Key': 'l+o7KdZtcRQhu+LatJADQQ==kodmdUBGdqyc6As9'},
+    contentType: 'application/json',
+    success: function(result) {
+        console.log(result);
+    },
+    error: function ajaxError(jqXHR) {
+        console.error('Error: ', jqXHR.responseText);
+    }
 });
