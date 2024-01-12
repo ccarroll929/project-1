@@ -95,8 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Expose calculateAverage function to the global scope
     window.calculateAverage = calculateAverage;
     const calculateTotalButton = document.querySelector('button');
-calculateTotalButton.addEventListener('click', calculateAverage);
-
+    calculateTotalButton.addEventListener('click', calculateAverage);
 
 });
 
