@@ -87,29 +87,27 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Call the function to generate the initial calorie intake calendar
-    generateCalorieCalendar(calorieData);
+    // generateCalorieCalendar(calorieData);
 
     // Call the function to initialize the calendar with input fields
-    initializeCalendar();
+    // initializeCalendar();
 
     // Expose calculateAverage function to the global scope
     window.calculateAverage = calculateAverage;
     const calculateTotalButton = document.querySelector('button');
-calculateTotalButton.addEventListener('click', calculateAverage);
-
+    calculateTotalButton.addEventListener('click', calculateAverage);
 
 });
 
-
-const access_token = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyM1JMTUQiLCJzdWIiOiJCV0o5N1kiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJ3aHIgd3BybyB3bnV0IHdzbGUgd2VjZyB3c29jIHdhY3Qgd294eSB3dGVtIHd3ZWkgd2NmIHdzZXQgd2xvYyB3cmVzIiwiZXhwIjoxNzA1MDI4MzU0LCJpYXQiOjE3MDQ5OTk1NTR9.PdQxtrTbqu6PtIeGk3eBfZ6I8yTrkShHEJspC0gF14Q"
-
-    fetch('https://api.fitbit.com/1/user/-/activities/heart/date/today/1d.json', {
-        method: "GET",
-        headers: {"Authorization": "Bearer " + access_token}
-    })
-        .then(response => response.json())
-        .then(json => console.log(json)); 
-// let heart_rate = activities-heart;value;restingHeartRate; 
-
-//  let heartrateEl = document.getElementById('fitbit-data-0')
-//  heartrateEl.innerHTML = ' Heart rate: ' + heart_rate;
+$.ajax({
+    method: 'GET',
+    url: 'https://api.calorieninjas.com/v1/nutrition?query=' + query,
+    headers: { 'X-Api-Key': 'l+o7KdZtcRQhu+LatJADQQ==kodmdUBGdqyc6As9'},
+    contentType: 'application/json',
+    success: function(result) {
+        console.log(result);
+    },
+    error: function ajaxError(jqXHR) {
+        console.error('Error: ', jqXHR.responseText);
+    }
+});

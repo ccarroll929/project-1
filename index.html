@@ -3,37 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css"/>
     <title>DailyGrind</title>
+    <script src="https://unpkg.com/@asmcss/assembler/dist/assembler.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css"/>
 </head>
-<body>
-    <header>
-        <h1>Daily Grind Wellness Tracker</h1>
+<body x-style="bg:#f4f4f4">
+    <header x-style="bg:#424242; color: #fff; p:1em">
+        <h1 x-style="pt:1em; text-align:center">Daily Grind Wellness Tracker</h1>
         <nav>
-            <ul>
+            <ul x-style="flex-row; justify-content: center; p:1%">
                 <li>Log-In</li>
                 <li>About</li>
                 <li>Contact Us</li>
             </ul>
         </nav>
     </header>
-    <section id="fitbit-container">
-        <card id="fitbit-data-0"></card>
-        <card id="fitbit-data-1"></card>
-        <card id="fitbit-data-2"></card>
-        <card id ="fitbit-data-3"></card>
-    </section>
     <div class="main-data">
         <div class="sidebar box-shadow">
             <h2>User Information Display</h2>
         </div>
-        <div class="info-display">
-            <div class="calorie-calendar box-shadow">
+        <div class="info-display" x-style="flex-col">
+            <div class="calorie-calendar box-shadow" x-style="bs:solid; p:5%; ml:1%; w: fit-content">
                 <h2>Calorie Intake Calendar</h2>
-                <div id="currentDateDisplay"></div> <!-- This div for displaying current date -->
-                <table id="calorieTable">
+                <div id="currentDateDisplay" x-style="color:#ff6d00; bg:#212121; font-size: 20px"></div> <!-- This div for displaying current date -->
+                <table id="calorieTable" x-style="bg:#424242">
                     <thead>
-                        <tr>
+                        <tr x-style="color: #ff6d00">
                             <th>Sun</th>
                             <th>Mon</th>
                             <th>Tue</th>
@@ -43,11 +38,11 @@
                             <th>Sat</th>
                         </tr>
                     </thead>
-                    <tbody id="calorieBody">
+                    <tbody id="calorieBody" x-style="color:#ff6d00; font-weight: bold">
                         <!-- Calendar cells with input fields for calories -->
                     </tbody>
                 </table>
-                <button onclick="calculateTotal()">Calculate Total</button>
+                <button onclick="calculateTotal()"  x-style="color:#ff6d00; font-weight: bold; bg:#212121; font-size: 16px">Calculate Average</button>
             </div>
             <div class="calendar-graph box-shadow">
                 <h2>Monthly Calories Graph</h2>
