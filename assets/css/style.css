@@ -11,7 +11,9 @@ body {
     padding-top: 1em;
     text-align: center; 
 } */
+
 /* Added selectors for navbar to center the elements with the document */
+
 nav {
     text-align: center;
 }
@@ -42,25 +44,25 @@ nav a {
     color: #fff;
     text-decoration: none;
 }
-/* Added these styles into index.html with assembler framework/*
+/* Added these styles into index.html with assembler framework */
+
 .calorie-calendar {
     border-style: solid;
     padding: 5%; 
     margin-left: 1%;
-    width: fit-content;
+    text-align: center;
 }
-/* 
-
 
 /* Add some styles to make it more visually appealing */
-/* Added these styles into index.html with assembler framework
-/* .calendar-graph {
+/* Added these styles into index.html with assembler framework */
+
+.calendar-graph {
     border-style: solid; 
     padding: 5%; 
     margin-top: 1%; 
     margin-left: 1%;
-    width: fit-content;
-} */
+    text-align: center;
+}
 
 /* Added classes and selectors for the data display sections*/
 .main-data {
@@ -69,10 +71,11 @@ nav a {
     justify-content: center;
 }
 
-/* .info-display {
+.info-display {
     display: flex;
     flex-flow: column wrap;
-} */
+    margin: 1%;
+}
 
 /* Added classes for proper sidebar functionality */
 
@@ -80,6 +83,8 @@ nav a {
     display: inline;
     border-style: solid;
     padding: 1%;
+    margin: 1%;
+    text-align: center;
 }
 
 .sidebar h2 {
@@ -96,19 +101,33 @@ nav a {
 }
 
 /* Optional: Add styles for responsive design */
+@media screen and (max-width: 1024px) {
+    .calorie-calendar,
+    .calendar-graph,
+    .sidebar {
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .calorie-calendar,
-    .calendar-graph {
-        margin: 1%;
+    .calendar-graph,
+    .sidebar {
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .calorie-calendar,
+    .calendar-graph,
+    .sidebar {
+        overflow: hidden;
+        overflow-x: scroll;
     }
 }
 /* Add some styles for the calendar cells with intake data */
 .calorie-calendar td.has-intake {
     background-color: #b3e0ff; /* Light blue for cells with intake data */
-}
-
-#calorieBody {
-    width: 50%;
-    overflow: hidden;
-    overflow-x: scroll;
 }

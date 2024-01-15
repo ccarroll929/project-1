@@ -87,10 +87,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Call the function to generate the initial calorie intake calendar
-    generateCalorieCalendar(calorieData);
+    // generateCalorieCalendar(calorieData);
 
     // Call the function to initialize the calendar with input fields
-    initializeCalendar();
+    // initializeCalendar();
 
     // Expose calculateAverage function to the global scope
     window.calculateAverage = calculateAverage;
