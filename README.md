@@ -1,29 +1,33 @@
 # Daily Grind Wellness Tracker
 
 ###  Project Description: 
-This web application will allow users to track their calorie intake and activity levels via user input and data retrieved from FitBit user accounts.
-
-#### User Story:
+This web application allows users to track their calories and calculate their daily average caloric intake. It utilizes two server-side APIs, Calorie Ninjas and API Ninja, to take types and amounts of food entered by the user and calculate the number of calories it has. The daily average caloric intake can then be calculated and displayed on a graph. 
+### User Story:
 - As a user who prioritizes my health and wellness, 
-- I want to be able to keep track of my calorie intake and daily activity levels 
+- I want to be able to keep track of my calorie intake
 - So that I can reach my personal wellness goals
 
-#### Acceptance Criteria:
+### Acceptance Criteria:
 - GIVEN I am an authenticated user,
-- WHEN I enter my daily calories/nutrition data,
-- THEN the data is saved and displayed on a monthly calendar timeline graph. 
+- WHEN I enter a type and amount of food,
+- THEN the application returns the number of calories in that type and amount of food   
+<br>
+- GIVEN I have the number of calories for my entered food data,
+- WHEN I enter my daily calorie data into my calendar, 
+- THEN the data is saved and stored to local storage.   
+<br>
+- GIVEN the data is saved and stored to local storage,
+- WHEN I click the "Calculate Average" button,
+- THEN my average daily number of calories is calculated and displayed in text and on a visual graph
 
-- GIVEN I am an authenticated user,
-- WHEN I provide access to my personal FitBit account and data, 
-- THEN my FitBit heartrate, daily steps, and calories-burned data is displayed on the application
+### User Flow Diagram: 
+- User enters type and amount of food → returns number of calories 
+- User enters daily calorie data into calendar → data is saved to local storage
+- User clicks  "Calculate Average" button → returns daily average number of calories and displays on graph
 
-#### User Flow Diagram: 
-- User enters fitbit login credentials > server responds with fitbit data 
-- User enters calorie/nutrition info > application displays data on a monthly calendar timeline graph
+### Server Side APIs:
+- [Calorie Ninjas API](https://calorieninjas.com/api)
+- [API Ninjas](https://api-ninjas.com/) 
 
-
-#### Server Side APIs:
-- Calorie Ninjas API
-- API Ninjas
-- FitBit API
-- Google Calendar API
+### CSS Framework:
+- [Assembler CSS](https://asmcss.com/)  
