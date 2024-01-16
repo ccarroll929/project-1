@@ -18,6 +18,12 @@ nav {
     text-align: center;
 }
 
+a {
+    color: white; 
+}
+a:hover{
+    color: #ff6d00; 
+}
 /* Added these styles into index.html with assembler framework */
 /* header {
     background-color: #333;
