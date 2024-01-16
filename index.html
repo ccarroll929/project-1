@@ -12,9 +12,15 @@
         <h1 x-style="pt:1em; text-align:center">Daily Grind Wellness Tracker</h1>
         <nav>
             <ul x-style="flex-row; justify-content: center; p:1%">
-                <li>Log-In</li>
-                <li>About</li>
-                <li>Contact Us</li>
+                <li>
+                    <a href="./log-in/login.html">Login</a>
+                </li>
+                <li>
+                    <a href="#about-us">About Us</a>
+                </li>
+                <li>
+                    <a href="#contact-us">Contact us</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -22,6 +28,57 @@
         <div class="sidebar box-shadow">
             <h2>User Information Display</h2>
         </div>
+          <!-- Added a calorie calculator with form inputs  -->
+       <div id="meal-container" x-style="flex-col">
+        <div x-style="p:10; mt-10; " class="container p-10 mt-10 box is-mobile">
+            <!-- Form -->
+            <div>
+              <div>
+                <form>
+                  <div x-style="flex-col; text-weight: semi-bold; p:4;">
+                    <label for="item-name" aria-placeholder="Enter meal" x-style="color:#ff6d00; font-weight: semi-bold">Meal
+                        <br>
+                        <input id="item-name" type="text" class="input"
+                        placeholder="Add a meal">
+                    </label>
+                    <br>
+                    <label x-style="color:#ff6d00; font-weight: semi-bold; ">Calories
+                        <br>
+                        <input id="item-calories" class="input"
+                        type="number"
+                        placeholder="Number of Calories">
+                    </label>
+                  </div>
+        
+                    <!--Buttons to save meals, delete meals, ect-->
+                  </div>
+                  <div>
+                    <button id="add-meal" class="button" x-style="color:#ff6d00; font-size: 14px; font-weight: bold">
+                      <i> </i>Add a Meal</button>
+                    <button id="delete-all" class="button" x-style="color:#ff6d00; font-size: 14px; font-weight: bold; ">
+                      <i> </i>Delete All</button>
+                  </div>
+                </form>
+              </div>
+              </div>
+  
+      <div>
+        <div>
+            <h3>
+                
+              </h3>
+        </div>
+      </div>
+      <!-- List of items -->
+      <div>
+        <ul id="item-list">
+        </ul>
+      </div>
+   
+  <div class="mb-3">
+      <h3 x-style="color: #424242; font-size: 18px; font-weight: bold; ">Total Calories: <span id="total-calories" x-style="color: #ff6d00"></span></h3>
+ 
+  </div>
         <div class="info-display" x-style="flex-col">
             <div class="calorie-calendar box-shadow" x-style="bs:solid; p:5%; ml:1%; w: fit-content">
                 <h2>Calorie Intake Calendar</h2>
@@ -51,6 +108,31 @@
             </div>
         </div>
     </div>
+    <footer x-style="bg:#424242">
+        <h2 id="about-us" x-style="color: #ff6d00; p:1">About:</h3>
+        <p x-style="color: white; font-size: 16px; m:3">
+            This web application allows users to calculate the total number of calories they consume each day and
+            determine their daily average caloric intake. Simply enter a type of food in the
+            <span x-style="color: #ff6d00">Meal</span> entry box 
+            and then click the <span x-style="color: #ff6d00">Add a Meal</span> button to add it to the list and the number of calories will be displayed!
+        </p>
+        <h2 id="contact-us" x-style="color: #ff6d00; p:1">Contact us:</h3> 
+        <ul x-style="color:white; m:3; ">
+            <li>Christina Carroll:
+                <a href="github.com/ccarroll929">github.com/ccarroll929</a>
+            </li>
+            <li>Oscar Thomas
+                <a href="https://github.com/Pitagoras17">github.com/Pitagoras17</a>
+            </li>
+            <li>Sam Bishop
+                <a href="https://github.com/SamBishop06">github.com/SamBishop06</a>   
+            </li>
+            <li>Bryce Wheeler
+                <a href="https://github.com/BryceGitHuba">github.com/BryceGitHuba</a>
+            </li>
+        </ul>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
