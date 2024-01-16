@@ -16,7 +16,7 @@
                         <a href="./log-in/login.html">Login</a>
                     </li>
                     <li>
-                        <a href="#about-us">About Us</a>
+                        <a href="#about-us">About</a>
                     </li>
                     <li>
                         <a href="#contact-us">Contact us</a>
@@ -28,11 +28,11 @@
             <div class="sidebar box-shadow">
                 <h2>User Information Display</h2>
                 <div id="exercise-searchbar">
-                    <label for="muscleInput" class="searchbar">Enter Muscle Group:</label>
+                    <label for="muscleInput" x-style="color:#ff6d00" class="searchbar">Enter Muscle Group:</label>
                         <div class="searchbar">
                             <input type="text" id="muscleInput" placeholder="E.g., biceps">
                         </div>
-                    <button onclick="getExercises()" class="searchbar">Get Exercises</button>
+                    <button onclick="getExercises()" x-style="color: #ff6d00; font-weight: bold;" class="searchbar">Get Exercises</button>
                     <div id="exerciseResults"></div>
                 </div>
             </div>
@@ -131,7 +131,7 @@
                                 <!--Buttons to save meals, delete meals, ect-->
                                 <div>
                                     <button id="add-meal" class="button" x-style="color:#ff6d00; font-size: 14px; font-weight: bold">
-                                    <i> </i>Add a Meal</button>
+                                    <i> </i>Add Meal</button> 
                                     <button id="delete-all" class="button" x-style="color:#ff6d00; font-size: 14px; font-weight: bold; ">
                                     <i> </i>Delete All</button>
                                 </div>
@@ -165,10 +165,16 @@
         <footer x-style="bg:#424242">
         <h2 id="about-us" x-style="color: #ff6d00; p:1">About:</h3>
         <p x-style="color: white; font-size: 16px; m:3">
-            This web application allows users to calculate the total number of calories they consume each day and
-            determine their daily average caloric intake. Simply enter a type of food in the
-            <span x-style="color: #ff6d00">Meal</span> entry box 
-            and then click the <span x-style="color: #ff6d00">Add a Meal</span> button to add it to the list and the number of calories will be displayed!
+            This web application allows users to find fitness exercises for a 
+            specific muscle/muscle group and also calculate the total number of 
+            calories they consume each day. Simply enter a muscle/muscle group
+            into the <span x-style="color: #ff6d00">Enter Muscle Group</span> text 
+            field and click <span x-style="color: #ff6d00">Get Exercises.</span> 
+            Then you can enter a meal in the <span x-style="color: #ff6d00">Meal</span>
+            entry box and then click the <span x-style="color: #ff6d00">Add Meal</span>
+            button to add it to the list and the number of calories will be displayed!
+            Continue adding meal items and the total number of calories in all meal items 
+            will be calculated.
         </p>
         <h2 id="contact-us" x-style="color: #ff6d00; p:1">Contact us:</h3> 
         <ul x-style="color:white; m:3; ">
