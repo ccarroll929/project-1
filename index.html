@@ -84,17 +84,81 @@
                 <h2>Calorie Intake Calendar</h2>
                 <div id="currentDateDisplay" x-style="color:#ff6d00; bg:#212121; font-size: 20px"></div> <!-- This div for displaying current date -->
                 <table id="calorieTable" x-style="bg:#424242">
-                    <thead>
-                        <tr x-style="color: #ff6d00">
-                            <th>Sun</th>
-                            <th>Mon</th>
-                            <th>Tue</th>
-                            <th>Wed</th>
-                            <th>Thu</th>
-                            <th>Fri</th>
-                            <th>Sat</th>
-                        </tr>
-                    </thead>
+                    <body onload="startTime()">
+                        <div class="container">
+                            <div class="card">
+                                <div class="front">
+                                    <div class="contentfront">
+                                        <div class="month"></div>
+                                    <table>
+                                        <tr x-style="color: #ff6d00">
+                                            <th>S</th>
+                                            <th>M</th>
+                                            <th>T</th>
+                                            <th>W</th>
+                                            <th>T</th>
+                                            <th>F</th>
+                                            <th>S</th>
+                                        </tr>
+                                        <tr class="whiteTr">
+                                            <th></th>
+                                            <th>1</th>
+                                            <th>2</th>
+                                            <th>3</th>
+                                            <th>4</th>
+                                            <th>5</th>
+                                            <th>6</th>
+                                        </tr>
+                                        <tr class="whiteTr">
+                                            <th>7</th>
+                                            <th>8</th>
+                                            <th>9</th>
+                                            <th>10</th>
+                                            <th>11</th>
+                                            <th>12</th>
+                                            <th>13</th>
+                                        </tr>
+                                        <tr class="whiteTr">
+                                            <th>14</th>
+                                            <th>15</th>
+                                            <th>16</th>
+                                            <th>17</th>
+                                            <th>18</th>
+                                            <th>19</th>
+                                            <th>20</th>
+                                        </tr>
+                                        <tr class="whiteTr">
+                                            <th>21</th>
+                                            <th>22</th>
+                                            <th>23</th>
+                                            <th>24</th>
+                                            <th>25</th>
+                                            <th>26</th>
+                                            <th>27</th>
+                                        </tr>
+                                        <tr class="whiteTr">
+                                            <th>28</th>
+                                            <th>29</th>
+                                            <th>30</th>
+                                            <th>31</th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                    </table>
+                                    </div>
+                                    <div class="date">
+                                        <div class="datecont">
+                                            <div id="date"></div>
+                                            <div id="day"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    </body>
                     <tbody id="calorieBody" x-style="color:#ff6d00; font-weight: bold">
                         <!-- Calendar cells with input fields for calories -->
                     </tbody>
