@@ -265,17 +265,33 @@ $.ajax({
 
 // API = "API Ninjas" This serves for exercise tracking.
 
-var muscle = " "
+function getExercises() {
+  var muscle = $('#muscleInput').val();
+  var exerciseResultsDiv = $('#exerciseResults');
 
-$.ajax({
-    method: 'GET',
-    url: 'https://api.api-ninjas.com/v1/exercises?muscle=' + muscle,
-    headers: { 'X-Api-Key': '0E+DJYOfVQaerLhB/eypXw==jIWxZimWbKidQsmH'},
-    contentType: 'application/json',
-    success: function(result) {
-        console.log(result);
-    },
-    error: function ajaxError(jqXHR) {
-        console.error('Error: ', jqXHR.responseText);
-    }
-});
+  $.ajax({
+      method: 'GET',
+      url: 'https://api.api-ninjas.com/v1/exercises?muscle=' + muscle,
+      headers: { 'X-Api-Key': '0E+DJYOfVQaerLhB/eypXw==jIWxZimWbKidQsmH'},
+      contentType: 'application/json',
+      success: function(result) {
+          // Clear previous results
+          exerciseResultsDiv.empty();
+
+          // Display new results
+          if (result && result.length > 0) {
+              var resultList = $('<ul></ul>');
+              result.forEach(function(exercise) {
+                  resultList.append('<li>' + exercise.name + '</li>');
+              });
+              exerciseResultsDiv.append(resultList);
+          } else {
+              exerciseResultsDiv.text('No exercises found for the given muscle group.');
+          }
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+          console.error('Error:', textStatus, errorThrown);
+          exerciseResultsDiv.text('Error fetching exercises. Please try again.');
+      }
+  });
+}
