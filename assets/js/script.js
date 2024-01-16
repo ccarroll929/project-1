@@ -99,10 +99,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+// API = "Calorie Ninjas" This serves for calorie tracking.
+
+var query = " "
+
 $.ajax({
     method: 'GET',
     url: 'https://api.calorieninjas.com/v1/nutrition?query=' + query,
     headers: { 'X-Api-Key': 'l+o7KdZtcRQhu+LatJADQQ==kodmdUBGdqyc6As9'},
+    contentType: 'application/json',
+    success: function(result) {
+        console.log(result);
+    },
+    error: function ajaxError(jqXHR) {
+        console.error('Error: ', jqXHR.responseText);
+    }
+});
+
+// API = "API Ninjas" This serves for exercise tracking.
+
+var muscle = " "
+
+$.ajax({
+    method: 'GET',
+    url: 'https://api.api-ninjas.com/v1/exercises?muscle=' + muscle,
+    headers: { 'X-Api-Key': '0E+DJYOfVQaerLhB/eypXw==jIWxZimWbKidQsmH'},
     contentType: 'application/json',
     success: function(result) {
         console.log(result);
