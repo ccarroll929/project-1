@@ -7,10 +7,13 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* h1 {
-    padding-top: 1em;
-    text-align: center; 
-} */
+footer {
+    text-align: center;
+}
+
+footer ul {
+    display: inline;
+}
 
 /* Added selectors for navbar to center the elements with the document */
 
@@ -105,6 +108,18 @@ nav a {
 .box-shadow {
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.searchbar {
+    padding: 1%;
+    margin: 1%;
+}
+
+#exercise-searchbar {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 1%;
+    margin: 1%;
 }
 
 /* Optional: Add styles for responsive design */

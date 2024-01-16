@@ -30,7 +30,6 @@ function addMeal(event){
       "itemName": mealName,
       "itemCalories": mealCalories
     }
-   
     StorageCtrl.storeItem(item);
     displayItems();
   }
@@ -102,7 +101,7 @@ function addMeal(event){
             }
           }
           // Retrieve items from local storage
-         function getItemsFromStorage() {
+          function getItemsFromStorage() {
             let items;
             if (localStorage.getItem('items') === null) {
               items = []
@@ -112,7 +111,7 @@ function addMeal(event){
             return items;
           }
           //Deleting data from local storage
-         function deleteItemFromStorage() {
+          function deleteItemFromStorage() {
             let item = ItemCtrl.findToDelete();
             console.log(item);
             let items = getItemsFromStorage();
