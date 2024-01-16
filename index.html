@@ -27,6 +27,14 @@
         <section class="main-data">
             <div class="sidebar box-shadow">
                 <h2>User Information Display</h2>
+                <div id="exercise-searchbar">
+                    <label for="muscleInput" class="searchbar">Enter Muscle Group:</label>
+                        <div class="searchbar">
+                            <input type="text" id="muscleInput" placeholder="E.g., biceps">
+                        </div>
+                    <button onclick="getExercises()" class="searchbar">Get Exercises</button>
+                    <div id="exerciseResults"></div>
+                </div>
             </div>
             <div class="info-display" x-style="flex-col">
                 <div class="calorie-calendar box-shadow" x-style="bs:solid; p:5%; ml:1%; w: fit-content">
@@ -97,23 +105,17 @@
                                                     </table>
                                                 </div>
                                             </div>
-                                        <!-- <div class="date">
-                                            <div class="datecont">
-                                                <div id="date"></div>
-                                                <div id="day"></div>
-                                            </div>
-                                        </div> -->
                                         </div>
                                     </div>
                                 </div>
                             </body>
                     </div>
-                <div class="calendar-graph box-shadow">
-                    <h2>Monthly Calories Graph</h2>
-                    <!-- Display the total calories within this div -->
-                    <div id="monthlyGraphPlaceholder"></div>
                 </div>
-                </div>
+            <div class="calendar-graph box-shadow">
+                <h2>Monthly Calories Graph</h2>
+                <!-- Display the total calories within this div -->
+                <div id="monthlyGraphPlaceholder"></div>
+            </div>
             </div>
         </section>
         <footer x-style="bg:#424242">
