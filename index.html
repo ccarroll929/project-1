@@ -12,9 +12,15 @@
         <h1 x-style="pt:1em; text-align:center">Daily Grind Wellness Tracker</h1>
         <nav>
             <ul x-style="flex-row; justify-content: center; p:1%">
-                <li>Log-In</li>
-                <li>About</li>
-                <li>Contact Us</li>
+                <li>
+                    <a href="./log-in/login.html">Login</a>
+                </li>
+                <li>
+                    <a href="#about-us">About Us</a>
+                </li>
+                <li>
+                    <a href="#contact-us">Contact us</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -102,6 +108,30 @@
             </div>
         </div>
     </div>
+    <footer x-style="bg:#424242">
+        <h2 id="about-us" x-style="color: #ff6d00; p:1">About:</h3>
+        <p x-style="color: white; font-size: 16px; m:3">
+            This web application allows users to calculate the total number of calories they consume each day and
+            determine their daily average caloric intake. Simply enter a type of food in the
+            <span x-style="color: #ff6d00">Meal</span> entry box 
+            and then click the <span x-style="color: #ff6d00">Add a Meal</span> button to add it to the list and the number of calories will be displayed!
+        </p>
+        <h2 id="contact-us" x-style="color: #ff6d00; p:1">Contact us:</h3> 
+        <ul x-style="color:white; m:3; ">
+            <li>Christina Carroll:
+                <a href="github.com/ccarroll929">github.com/ccarroll929</a>
+            </li>
+            <li>Oscar Thomas
+                <a href="https://github.com/Pitagoras17">github.com/Pitagoras17</a>
+            </li>
+            <li>Sam Bishop
+                <a href="https://github.com/SamBishop06">github.com/SamBishop06</a>   
+            </li>
+            <li>Bryce Wheeler
+                <a href="https://github.com/BryceGitHuba">github.com/BryceGitHuba</a>
+            </li>
+        </ul>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="./assets/js/script.js"></script>
