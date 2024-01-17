@@ -8,13 +8,10 @@
         <link rel="stylesheet" href="./assets/css/style.css"/>
     </head>
     <body x-style="bg:#f4f4f4">
-        <header x-style="bg:#424242; color: #fff; p:1em">
-            <h1 x-style="pt:1em; text-align:center">Daily Grind Wellness Tracker</h1>
+        <header x-style="bg:#424242; color: #fff; p:1em; mb:5;">
+            <h1 x-style="pt:1em; text-align:center">DailyGrind Wellness Tracker</h1>
             <nav>
                 <ul x-style="flex-row; justify-content: center; p:1%">
-                    <li>
-                        <a href="./log-in/login.html">Login</a>
-                    </li>
                     <li>
                         <a href="#about-us">About</a>
                     </li>
@@ -25,103 +22,31 @@
             </nav>
         </header>
         <section class="main-data">
-            <div class="sidebar box-shadow">
-                <h2>User Information Display</h2>
+            <div class="sidebar box-shadow" x-style="bg:#424242">
+                <h2 x-style="color: white; m:10">Exercise Finder</h2>
                 <div id="exercise-searchbar">
                     <label for="muscleInput" x-style="color:#ff6d00" class="searchbar">Enter Muscle Group:</label>
                         <div class="searchbar">
-                            <input type="text" id="muscleInput" placeholder="E.g., biceps">
                         </div>
                     <button onclick="getExercises()" x-style="color: #ff6d00; font-weight: bold;" class="searchbar">Get Exercises</button>
-                    <div id="exerciseResults"></div>
+                    <div id="exerciseResults" x-style="color:white;"></div>
                 </div>
             </div>
-            <div class="info-display" x-style="flex-col">
-                <div class="calorie-calendar box-shadow" x-style="bs:solid; p:5%; ml:1%; w: fit-content">
-                    <h2>Calorie Intake Calendar</h2>
-                    <!-- This div for displaying current date -->
-                    <div id="currentDateDisplay" x-style="color:#ff6d00; bg:#212121; font-size: 20px">
-                            <!-- <body onload="startTime()"> -->
-                                <div class="container">
-                                    <div class="card">
-                                        <div class="front">
-                                            <div class="contentfront">
-                                                <div class="month">
-                                                    <table>
-                                                        <tr x-style="color: #ff6d00">
-                                                            <th>S</th>
-                                                            <th>M</th>
-                                                            <th>T</th>
-                                                            <th>W</th>
-                                                            <th>T</th>
-                                                            <th>F</th>
-                                                            <th>S</th>
-                                                        </tr>
-                                                        <tr class="whiteTr">
-                                                            <th></th>
-                                                            <th>1</th>
-                                                            <th>2</th>
-                                                            <th>3</th>
-                                                            <th>4</th>
-                                                            <th>5</th>
-                                                            <th>6</th>
-                                                        </tr>
-                                                        <tr class="whiteTr">
-                                                            <th>7</th>
-                                                            <th>8</th>
-                                                            <th>9</th>
-                                                            <th>10</th>
-                                                            <th>11</th>
-                                                            <th>12</th>
-                                                            <th>13</th>
-                                                        </tr>
-                                                        <tr class="whiteTr">
-                                                            <th>14</th>
-                                                            <th>15</th>
-                                                            <th>16</th>
-                                                            <th>17</th>
-                                                            <th>18</th>
-                                                            <th>19</th>
-                                                            <th>20</th>
-                                                        </tr>
-                                                        <tr class="whiteTr">
-                                                            <th>21</th>
-                                                            <th>22</th>
-                                                            <th>23</th>
-                                                            <th>24</th>
-                                                            <th>25</th>
-                                                            <th>26</th>
-                                                            <th>27</th>
-                                                        </tr>
-                                                        <tr class="whiteTr">
-                                                            <th>28</th>
-                                                            <th>29</th>
-                                                            <th>30</th>
-                                                            <th>31</th>
-                                                            <th></th>
-                                                            <th></th>
-                                                            <th></th>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </body>
-                    </div>
-                    <div x-style="p:10; mt-10; " class="container p-10 mt-10 box is-mobile">
+            </section>
+
+            <div class="info-display" x-style="bg:#424242; m:3; flex-col:">   
+                    <div x-style="p:5"> 
                         <!-- Form -->
                         <div>
                             <form>
-                                <div x-style="flex-col; text-weight: semi-bold; p:4;">
+                                <div x-style="text-weight: semi-bold; p:4">
                                     <label for="item-name" aria-placeholder="Enter meal" x-style="color:#ff6d00; font-weight: semi-bold">Meal
                                         <br>
                                         <input id="item-name" type="text" class="input"
                                         placeholder="Add a meal">
                                     </label>
                                     <br>
-                                    <label x-style="color:#ff6d00; font-weight: semi-bold; ">Calories
+                                    <label x-style="color:#ff6d00; font-weight: semi-bold">Calories
                                         <br>
                                         <input id="item-calories" class="input"
                                         type="number"
@@ -139,29 +64,21 @@
                         </div>    
                     </div>
                     <!-- List of items -->
-                    <div>
-                        <ul id="item-list">
+                    <div x-style="color: white; flex-col; justify-content:center">
+                        <ul id="item-list" x-style="m:10; text-align:center;"> 
                         </ul>
+                        <h3 x-style="text-align:center; color: white; font-size: 18px; font-weight: bold; ">Total Calories: <span id="total-calories" x-style="color: #ff6d00"></span></h3>
                     </div>
-                    <div id="meal-container" x-style="flex-col">
+                    <div id="meal-container">
                         <div>
                             <div>
                                 <h3>
                                 </h3>
                             </div>
                         </div>
-                    </div>
-                    <div class="mb-3">
-                        <h3 x-style="color: #424242; font-size: 18px; font-weight: bold; ">Total Calories: <span id="total-calories" x-style="color: #ff6d00"></span></h3>
-                    </div>
+                    </div>         
                 </div>
-            <div class="calendar-graph box-shadow">
-                <h2>Monthly Calories Graph</h2>
-                <!-- Display the total calories within this div -->
-                <div id="monthlyGraphPlaceholder"></div>
-            </div>
-            </div>
-        </section>
+            </div> 
         <footer x-style="bg:#424242">
         <h2 id="about-us" x-style="color: #ff6d00; p:1">About:</h3>
         <p x-style="color: white; font-size: 16px; m:3">

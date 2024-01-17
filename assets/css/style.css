@@ -28,20 +28,6 @@ a:hover{
     color: #ff6d00; 
 }
 
-/* Added these styles into index.html with assembler framework */
-/* header {
-    background-color: #333;
-    color: #fff;
-    padding: 1em;
-} */
-
-/* nav ul {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    padding: 1%;
-} */
-
 nav li {
     display: inline;
     padding: 1em;
@@ -56,23 +42,6 @@ nav a {
 }
 /* Added these styles into index.html with assembler framework */
 
-.calorie-calendar {
-    border-style: solid;
-    padding: 5%; 
-    margin-left: 1%;
-    text-align: center;
-}
-
-/* Add some styles to make it more visually appealing */
-/* Added these styles into index.html with assembler framework */
-
-.calendar-graph {
-    border-style: solid; 
-    padding: 5%; 
-    margin-top: 1%; 
-    margin-left: 1%;
-    text-align: center;
-}
 
 /* Added classes and selectors for the data display sections*/
 .main-data {
@@ -83,8 +52,14 @@ nav a {
 
 .info-display {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column wrap; 
+    justify-content: center; 
     margin: 1%;
+}
+
+.meal-container {
+
+    float: left; 
 }
 
 /* Added classes for proper sidebar functionality */
@@ -124,8 +99,6 @@ nav a {
 
 /* Optional: Add styles for responsive design */
 @media screen and (max-width: 1024px) {
-    .calorie-calendar,
-    .calendar-graph,
     .sidebar {
         overflow: hidden;
         overflow-x: scroll;
@@ -133,8 +106,6 @@ nav a {
 }
 
 @media screen and (max-width: 768px) {
-    .calorie-calendar,
-    .calendar-graph,
     .sidebar {
         overflow: hidden;
         overflow-x: scroll;
@@ -142,14 +113,8 @@ nav a {
 }
 
 @media screen and (max-width: 425px) {
-    .calorie-calendar,
-    .calendar-graph,
     .sidebar {
         overflow: hidden;
         overflow-x: scroll;
     }
-}
-/* Add some styles for the calendar cells with intake data */
-.calorie-calendar td.has-intake {
-    background-color: #b3e0ff; /* Light blue for cells with intake data */
 }
