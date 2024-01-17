@@ -28,13 +28,34 @@
             <div class="sidebar box-shadow">
                 <h2>User Information Display</h2>
                 <div id="exercise-searchbar">
-                    <label for="muscleInput" class="searchbar">Enter Muscle Group:</label>
-                        <div class="searchbar">
-                            <input type="text" id="muscleInput" placeholder="E.g., biceps">
-                        </div>
+                    <label for="muscleSelect" class="searchbar">Select Muscle Group:</label>
+                    <div class="searchbar">
+                        <select id="muscleSelect">
+                            <!-- Add options for each muscle group -->
+                            <option value="biceps">Biceps</option>
+                            <option value="triceps">Triceps</option>
+                            <option value="abdominals">abdominals</option>
+                            <option value="abductors">abductors</option>
+                            <option value="calves">calves</option>
+                            <option value="adductors">adductors</option>
+                            <option value="forearms">forearms</option>
+                            <option value="glutes">glutes</option>
+                            <option value="hamstrings">hamstrings</option>
+                            <option value="lats">lats</option>
+                            <option value="lower_back">lower_back</option>
+                            <option value="middle_back">middle_back</option>
+                            <option value="neck">neck</option>
+                            <option value="quadriceps">quadriceps</option>
+                            <option value="traps">traps</option>
+                            <option value="triceps">triceps</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                    </div>
                     <button onclick="getExercises()" class="searchbar">Get Exercises</button>
                     <div id="exerciseResults"></div>
                 </div>
+            </div>
+        </section>
             </div>
             <div class="info-display" x-style="flex-col">
                 <div class="calorie-calendar box-shadow" x-style="bs:solid; p:5%; ml:1%; w: fit-content">
