@@ -1,29 +1,42 @@
 # Daily Grind Wellness Tracker
 
 ###  Project Description: 
-This web application will allow users to track their calorie intake and activity levels via user input and data retrieved from FitBit user accounts.
+This web application is designed to help wellness-oriented users to find exercises by searching for a muscle or muscle group and also keep track of their daily calorie intake with a calorie calculator. It utilizes two server-side API databases, API Ninjas and Calorie Ninjas, to provide users with the data for exercises and calorie intake. 
+### User Story:
 
-#### User Story:
-- As a user who prioritizes my health and wellness, 
-- I want to be able to keep track of my calorie intake and daily activity levels 
+- As a user who prioritizes personal fitness,
+- I want to find exercises for specific muscle groups,
+- So that I can achieve an effective workout
+
+- As a user who prioritizes personal wellness, 
+- I want to keep track of my calorie intake
 - So that I can reach my personal wellness goals
 
-#### Acceptance Criteria:
-- GIVEN I am an authenticated user,
-- WHEN I enter my daily calories/nutrition data,
-- THEN the data is saved and displayed on a monthly calendar timeline graph. 
 
-- GIVEN I am an authenticated user,
-- WHEN I provide access to my personal FitBit account and data, 
-- THEN my FitBit heartrate, daily steps, and calories-burned data is displayed on the application
+### Acceptance Criteria:
+- GIVEN I am a user searching for effective exercises,
+- WHEN I enter a muscle or muscle group in the search bar,
+- THEN the application returns exercises that target that muscle/muscle group  
+<br> 
+- GIVEN I am a user watching their calorie intake, 
+- WHEN I enter the meals I have eaten today and click the "Add Meal" button, 
+- THEN the application returns the number of calories in that meal item and saves item to local storage  
+<br>
+- GIVEN I enter an additional meal item,
+- WHEN I click the "Add Meal" button,
+- THEN it is added to the meal list and the total calories of all items in the list is calculated  
 
-#### User Flow Diagram: 
-- User enters fitbit login credentials > server responds with fitbit data 
-- User enters calorie/nutrition info > application displays data on a monthly calendar timeline graph
+### User Flow Diagram: 
+- User enters muscle or muscle group →  returns exercises that target the muscle group  
+
+- User enters meal item → returns number of calories in meal item  
+
+- User enters additional meal item → calculates total calories of all meal items  
 
 
-#### Server Side APIs:
-- Calorie Ninjas API
-- API Ninjas
-- FitBit API
-- Google Calendar API
+### Server Side APIs:
+- [Calorie Ninjas API](https://calorieninjas.com/api)
+- [API Ninjas](https://api-ninjas.com/) 
+
+### CSS Framework:
+- [Assembler CSS](https://asmcss.com/)  
