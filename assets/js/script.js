@@ -162,7 +162,7 @@ $.ajax({
 // API = "API Ninjas" This serves for exercise tracking.
 
 function getExercises() {
-  var muscle = $('#muscleInput').val();
+  var muscle = $('#muscleSelect').val(); // Change to select element ID
   var exerciseResultsDiv = $('#exerciseResults');
 
   $.ajax({
