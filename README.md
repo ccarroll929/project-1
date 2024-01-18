@@ -2,6 +2,13 @@
 
 ###  Project Description: 
 This web application is designed to help wellness-oriented users to find exercises by searching for a muscle or muscle group and also keep track of their daily calorie intake with a calorie calculator. It utilizes two server-side API databases, API Ninjas and Calorie Ninjas, to provide users with the data for exercises and calorie intake. 
+
+### [Deployed application link (click here)]( https://ccarroll929.github.io/wellness-tracker-app/) 
+
+### ![Screenshots of deployed application:](./assets/images/Deployed-Page-SS-0.PNG)  
+### ![](./assets/images/Deployed-Page-SS-1.PNG)
+
+
 ### User Story:
 
 - As a user who prioritizes personal fitness,
