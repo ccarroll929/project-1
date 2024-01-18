@@ -1,4 +1,4 @@
-# Daily Grind Wellness Tracker
+# DailyGrind Wellness Tracker
 
 ###  Project Description: 
 This web application is designed to help wellness-oriented users to find exercises by searching for a muscle or muscle group and also keep track of their daily calorie intake with a calorie calculator. It utilizes two server-side API databases, API Ninjas and Calorie Ninjas, to provide users with the data for exercises and calorie intake. 
