@@ -31,20 +31,19 @@
                             <!-- Add options for each muscle group -->
                             <option value="biceps">Biceps</option>
                             <option value="triceps">Triceps</option>
-                            <option value="abdominals">abdominals</option>
-                            <option value="abductors">abductors</option>
-                            <option value="calves">calves</option>
-                            <option value="adductors">adductors</option>
-                            <option value="forearms">forearms</option>
-                            <option value="glutes">glutes</option>
-                            <option value="hamstrings">hamstrings</option>
-                            <option value="lats">lats</option>
-                            <option value="lower_back">lower_back</option>
-                            <option value="middle_back">middle_back</option>
-                            <option value="neck">neck</option>
-                            <option value="quadriceps">quadriceps</option>
-                            <option value="traps">traps</option>
-                            <option value="triceps">triceps</option>
+                            <option value="abdominals">Abdominals</option>
+                            <option value="abductors">Abductors</option>
+                            <option value="calves">Calves</option>
+                            <option value="adductors">Adductors</option>
+                            <option value="forearms">Forearms</option>
+                            <option value="glutes">Glutes</option>
+                            <option value="hamstrings">Hamstrings</option>
+                            <option value="lats">Lats</option>
+                            <option value="lower_back">Lower Back</option>
+                            <option value="middle_back">Middle Back</option>
+                            <option value="neck">Neck</option>
+                            <option value="quadriceps">Quadriceps</option>
+                            <option value="traps">Traps</option>
                             <!-- Add more options as needed -->
                         </select>
                     </div>
@@ -53,54 +52,53 @@
                 </div>
             </div>
         </section>
-
-             <div class="info-display" x-style="bg:#424242; m:3; flex-col:">   
-                    <div x-style="p:5"> 
-                        <!-- Form -->
-                        <div>
-                            <form>
-                                <div x-style="text-weight: semi-bold; p:4">
-                                    <label for="item-name" aria-placeholder="Enter meal" x-style="color:#ff6d00; font-weight: semi-bold">Meal
-                                        <br>
-                                        <input id="item-name" type="text" class="input"
-                                        placeholder="Add a meal">
-                                    </label>
-                                    <br>
-                                    <label x-style="color:#ff6d00; font-weight: semi-bold">Calories
-                                        <br>
-                                        <input id="item-calories" class="input"
-                                        type="number"
-                                        placeholder="Number of Calories">
-                                    </label>
-                                </div>
-                                <!--Buttons to save meals, delete meals, ect-->
-                                <div>
-                                    <button id="add-meal" class="button" x-style="color:#ff6d00; font-size: 14px; font-weight: bold">
-                                    <i> </i>Add Meal</button> 
-                                    <button id="delete-all" class="button" x-style="color:#ff6d00; font-size: 14px; font-weight: bold; ">
-                                    <i> </i>Delete All</button>
-                                </div>
-                            </form>
-                        </div>    
-                    </div>
-                    <!-- List of items -->
-                    <div x-style="color: white; flex-col; justify-content:center">
-                        <ul id="item-list" x-style="m:10; text-align:center;"> 
-                        </ul>
-                        <h3 x-style="text-align:center; color: white; font-size: 18px; font-weight: bold; ">Total Calories: <span id="total-calories" x-style="color: #ff6d00"></span></h3>
-                    </div>
-                    <div id="meal-container">
-                        <div>
-                            <div>
-                                <h3>
-                                </h3>
-                            </div>
+        <div class="info-display" x-style="bg:#424242; m:3; flex-row:">   
+            <div x-style="p:5"> 
+                <!-- Form -->
+                <div>
+                    <form>
+                        <div x-style="text-weight: semi-bold; p:4">
+                            <label for="item-name" aria-placeholder="Enter meal" x-style="color:#ff6d00; font-weight: semi-bold">Meal
+                                <br>
+                                <input id="item-name" type="text" class="input"
+                                placeholder="Add a meal">
+                            </label>
+                            <br>
+                            <label x-style="color:#ff6d00; font-weight: semi-bold">Calories
+                                <br>
+                                <input id="item-calories" class="input"
+                                type="number"
+                                placeholder="Number of Calories">
+                            </label>
                         </div>
-                    </div>         
-                </div>
-            </div> 
+                        <!--Buttons to save meals, delete meals, ect-->
+                        <div id="calorie-buttons">
+                            <button id="add-meal" class="button" x-style="color:#ff6d00; font-size: 14px; font-weight: bold">
+                            <i> </i>Add Meal</button>
+                            <button id="delete-all" class="button" x-style="color:#ff6d00; font-size: 14px; font-weight: bold; ">
+                            <i> </i>Delete All</button>
+                        </div>
+                    </form>
+                </div>    
+            </div>
+            <!-- List of items -->
+            <div x-style="color: white; flex-col; justify-content:center">
+                <ul id="item-list" x-style="m:10; text-align:center;"> 
+                </ul>
+                <h3 x-style="text-align:center; color: white; font-size: 18px; font-weight: bold; margin: 1%; line-height: 2em;">Total Calories: <span id="total-calories" x-style="color: #ff6d00"></span></h3>
+            </div>
+                <div id="meal-container">
+                    <div>
+                        <div>
+                            <h3>
+                            </h3>
+                        </div>
+                    </div>
+                </div>         
+            </div>
+        </div> 
         <footer x-style="bg:#424242">
-        <h2 id="about-us" x-style="color: #ff6d00; p:1">About:</h3>
+        <h2 id="about-us" x-style="color: #ff6d00; p:1; padding-top: 1em">About:</h3>
         <p x-style="color: white; font-size: 16px; m:3">
             This web application allows users to find fitness exercises for a 
             specific muscle/muscle group and also calculate the total number of 
