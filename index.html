@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="./assets/css/style.css"/>
     </head>
     <body x-style="bg:#f4f4f4">
-        <header x-style="bg:#424242; color: #fff; p:1em; mb:5;">
+        <header x-style="bg:#424242; color: #fff; p:1em; mb:5; m:3;">
             <h1 x-style="pt:1em; text-align:center">DailyGrind Wellness Tracker</h1>
             <nav>
                 <ul x-style="flex-row; justify-content: center; p:1%">
@@ -21,15 +21,16 @@
                 </ul>
             </nav>
         </header>
-        <section class="main-data">
-            <div class="sidebar box-shadow" x-style="bg:#424242">
-                <h2 x-style="color: white; m:10">Exercise Finder</h2>
+        <section class="main-data" x-style="bg:#424242; m:10; p:5">
+            <div class="sidebar" x-style="bg:#424242; p:10">
+                <h2 x-style="color: white;">Exercise Finder</h2>
                 <div id="exercise-searchbar">
                     <label for="muscleSelect" class="searchbar" x-style="color:#ff6d00">Select Muscle Group:</label>
                     <div class="searchbar">
                         <select id="muscleSelect">
                             <!-- Add options for each muscle group -->
                             <option value="biceps">Biceps</option>
+                            <option value="chest">Chest</option>
                             <option value="triceps">Triceps</option>
                             <option value="abdominals">Abdominals</option>
                             <option value="abductors">Abductors</option>
@@ -48,46 +49,46 @@
                         </select>
                     </div>
                     <button onclick="getExercises()" class="searchbar" x-style="color:#ff6d00; font-weight: bold; ml:10; mr:10;">Get Exercises</button>
-                    <div id="exerciseResults" x-style="color:white"></div>
+                    <div id="exerciseResults" x-style="color:white; text-align:left;"></div>
                 </div>
             </div>
-        </section>
-        <div class="info-display" x-style="bg:#424242; m:3; flex-row:">   
-            <div x-style="p:5"> 
-                <!-- Form -->
-                <div>
-                    <form>
-                        <div x-style="text-weight: semi-bold; p:4">
-                            <label for="item-name" aria-placeholder="Enter meal" x-style="color:#ff6d00; font-weight: semi-bold">Meal
+            <div class="info-display" x-style="bg:#424242; flex-row:">
+                <div x-style="m:1em"> 
+                    <!-- Form -->
+                    <div>
+                        <form>
+                            <h2 x-style="color: white; text-align:center;">Nutrition Search</h2>
+                            <div x-style="text-weight: semi-bold; p:4">
+                                <label for="item-name" aria-placeholder="Enter meal" x-style="color:#ff6d00; font-weight: semi-bold">Meal
+                                    <br>
+                                    <input id="item-name" type="text" class="input"
+                                    placeholder="Add a meal">
+                                </label>
                                 <br>
-                                <input id="item-name" type="text" class="input"
-                                placeholder="Add a meal">
-                            </label>
-                            <br>
-                            <label x-style="color:#ff6d00; font-weight: semi-bold">Calories
-                                <br>
-                                <input id="item-calories" class="input"
-                                type="number"
-                                placeholder="Number of Calories">
-                            </label>
-                        </div>
-                        <!--Buttons to save meals, delete meals, ect-->
-                        <div id="calorie-buttons">
-                            <button id="add-meal" class="button" x-style="color:#ff6d00; font-size: 14px; font-weight: bold">
-                            <i> </i>Add Meal</button>
-                            <button id="delete-all" class="button" x-style="color:#ff6d00; font-size: 14px; font-weight: bold; ">
-                            <i> </i>Delete All</button>
-                        </div>
-                    </form>
-                </div>    
-            </div>
+                                <label x-style="color:#ff6d00; font-weight: semi-bold">Calories
+                                    <br>
+                                    <input id="item-calories" class="input"
+                                    type="number"
+                                    placeholder="Number of Calories">
+                                </label>
+                            </div>
+                            <!--Buttons to save meals, delete meals, ect-->
+                            <div id="calorie-buttons">
+                                <button id="add-meal" class="button" x-style="color:#ff6d00; font-size: 14px; font-weight: bold">
+                                <i> </i>Add Meal</button>
+                                <button id="delete-all" class="button" x-style="color:#ff6d00; font-size: 14px; font-weight: bold; ">
+                                <i> </i>Delete All</button>
+                            </div>
+                        </form>
+                    </div>    
+                </div>
             <!-- List of items -->
             <div x-style="color: white; flex-col; justify-content:center">
                 <ul id="item-list" x-style="m:10; text-align:center;"> 
                 </ul>
                 <h3 x-style="text-align:center; color: white; font-size: 18px; font-weight: bold; margin: 1%; line-height: 2em;">Total Calories: <span id="total-calories" x-style="color: #ff6d00"></span></h3>
             </div>
-                <div id="meal-container">
+                <div id="meal-container" x-style="text-align:left;">
                     <div>
                         <div>
                             <h3>
@@ -96,10 +97,10 @@
                     </div>
                 </div>         
             </div>
-        </div> 
-        <footer x-style="bg:#424242">
+        </section> 
+        <footer x-style="bg:#424242; m:3;">
         <h2 id="about-us" x-style="color: #ff6d00; p:1; padding-top: 1em">About:</h3>
-        <p x-style="color: white; font-size: 16px; m:3">
+        <p x-style="color: white; font-size: 16px; m:3; p:3">
             This web application allows users to find fitness exercises for a 
             specific muscle/muscle group and also calculate the total number of 
             calories they consume each day. Simply select a muscle option from the 
@@ -111,8 +112,8 @@
             Continue adding meal items and the total number of calories in all meal items 
             will be calculated.
         </p>
-        <h2 id="contact-us" x-style="color: #ff6d00; p:1">Contact us:</h3> 
-        <ul x-style="color:white; m:3; ">
+        <h2 id="contact-us" x-style="color: #ff6d00; line-height:1em;">Contact us:</h3> 
+        <ul x-style="color:white; m:1;">
             <li>Christina Carroll:
                 <a href="github.com/ccarroll929">github.com/ccarroll929</a>
             </li>
