@@ -66,7 +66,6 @@ nav a {
 
 .sidebar {
     display: inline;
-    border-style: solid;
     padding: 1%;
     margin: 1%;
     text-align: center;
@@ -78,11 +77,6 @@ nav a {
     text-align: center;
     font-size: 1.2em;
     color: #333;
-}
-
-.box-shadow {
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .searchbar {
@@ -105,23 +99,11 @@ nav a {
 }
 
 /* Optional: Add styles for responsive design */
-@media screen and (max-width: 1024px) {
-    .sidebar {
-        overflow: hidden;
-        overflow-x: scroll;
-    }
+/* @media screen and (max-width: 1024px) {
 }
 
 @media screen and (max-width: 768px) {
-    .sidebar {
-        overflow: hidden;
-        overflow-x: scroll;
-    }
 }
 
 @media screen and (max-width: 425px) {
-    .sidebar {
-        overflow: hidden;
-        overflow-x: scroll;
-    }
-}
+} */
