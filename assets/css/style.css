@@ -75,8 +75,6 @@ nav a {
     display: inline;
     padding-bottom: 1em;
     text-align: center;
-    font-size: 1.2em;
-    color: #333;
 }
 
 .searchbar {
@@ -99,11 +97,20 @@ nav a {
 }
 
 /* Optional: Add styles for responsive design */
-/* @media screen and (max-width: 1024px) {
-}
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+    body {
+        font-size: larger;
+    }
 }
 
 @media screen and (max-width: 425px) {
-} */
+    body {
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    body {
+        font-size: xx-small;
+    }
+}

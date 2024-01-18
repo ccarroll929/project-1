@@ -23,7 +23,7 @@
         </header>
         <section class="main-data" x-style="bg:#424242; m:10; p:5">
             <div class="sidebar" x-style="bg:#424242; p:10">
-                <h2 x-style="color: white; m:10">Exercise Finder</h2>
+                <h2 x-style="color: white;">Exercise Finder</h2>
                 <div id="exercise-searchbar">
                     <label for="muscleSelect" class="searchbar" x-style="color:#ff6d00">Select Muscle Group:</label>
                     <div class="searchbar">
@@ -49,7 +49,7 @@
                         </select>
                     </div>
                     <button onclick="getExercises()" class="searchbar" x-style="color:#ff6d00; font-weight: bold; ml:10; mr:10;">Get Exercises</button>
-                    <div id="exerciseResults" x-style="color:white"></div>
+                    <div id="exerciseResults" x-style="color:white; text-align:left;"></div>
                 </div>
             </div>
             <div class="info-display" x-style="bg:#424242; flex-row:">
@@ -88,7 +88,7 @@
                 </ul>
                 <h3 x-style="text-align:center; color: white; font-size: 18px; font-weight: bold; margin: 1%; line-height: 2em;">Total Calories: <span id="total-calories" x-style="color: #ff6d00"></span></h3>
             </div>
-                <div id="meal-container">
+                <div id="meal-container" x-style="text-align:left;">
                     <div>
                         <div>
                             <h3>
