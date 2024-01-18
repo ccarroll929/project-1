@@ -15,7 +15,7 @@ This web application is designed to help wellness-oriented users to find exercis
 
 ### Acceptance Criteria:
 - GIVEN I am a user searching for effective exercises,
-- WHEN I enter a muscle or muscle group in the search bar,
+- WHEN I select a muscle option from the drop-down menu,
 - THEN the application returns exercises that target that muscle/muscle group  
 <br> 
 - GIVEN I am a user watching their calorie intake, 
@@ -24,10 +24,10 @@ This web application is designed to help wellness-oriented users to find exercis
 <br>
 - GIVEN I enter an additional meal item,
 - WHEN I click the "Add Meal" button,
-- THEN it is added to the meal list and the total calories of all items in the list is calculated  
+- THEN it is added to the meal list and the total calories of all items in the list is calculated 
 
 ### User Flow Diagram: 
-- User enters muscle or muscle group →  returns exercises that target the muscle group  
+- User enters muscle or muscle group → returns exercises that target the muscle group  
 
 - User enters meal item → returns number of calories in meal item  
 
