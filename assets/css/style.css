@@ -97,6 +97,13 @@ nav a {
     margin: 1%;
 }
 
+#calorie-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
 /* Optional: Add styles for responsive design */
 @media screen and (max-width: 1024px) {
     .sidebar {
